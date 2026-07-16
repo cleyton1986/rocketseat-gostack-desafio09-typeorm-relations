@@ -40,7 +40,7 @@ class ProductsRepository implements IProductsRepository {
       where: { name },
     });
 
-    return product;
+    return product ?? undefined;
   }
 
   public async findAllById(products: IFindProducts[]): Promise<Product[]> {
